@@ -1,0 +1,14 @@
+{
+    "git.ignoreLimitWarning": true,
+
+    // ─── AsktaoH5 SVN 更新工具配置 ──────────────────────────────────────────
+    "asktao-svn.sqlPassword": "ZHLzhl514419!",
+    "asktao-svn.repos": [
+        {
+            "name": "项目",
+            "serverDir": "D:/path/to/server",
+            "clientDir": "D:/path/to/client",
+            "groupName": ""
+        }
+    ]
+}

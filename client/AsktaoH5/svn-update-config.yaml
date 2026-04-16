@@ -1,0 +1,11 @@
+sql_password: "ZHLzhl514419!"
+
+repos:
+  - name: "项目"
+    server_dir: "D:/path/to/server"   # 服务端 SVN 目录
+    client_dir: "D:/path/to/client"   # 客户端 SVN 目录（含 AsktaoH5 子目录）
+
+  # 可继续添加更多仓库：
+  # - name: "项目2"
+  #   server_dir: "D:/another/server"
+  #   client_dir: "D:/another/client"

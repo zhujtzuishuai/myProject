@@ -1,0 +1,50 @@
+{
+  "name": "asktao-svn",
+  "displayName": "AsktaoH5 SVN",
+  "description": "AsktaoH5 项目 SVN 一键更新",
+  "version": "1.16.0",
+  "publisher": "asktao",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asktao/asktao-svn"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "asktao-svn.update",
+        "title": "AsktaoH5: SVN 更新"
+      }
+    ],
+    "configuration": {
+      "title": "AsktaoH5 SVN",
+      "properties": {
+        "asktao-svn.sqlPassword": {
+          "type": "string",
+          "default": "",
+          "description": "SQL 密码（bat 脚本遇到密码提示时自动输入）"
+        },
+        "asktao-svn.repos": {
+          "type": "array",
+          "default": [],
+          "description": "SVN 仓库列表",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name":      { "type": "string", "description": "仓库名称" },
+              "serverDir": { "type": "string", "description": "服务端 SVN 目录" },
+              "clientDir": { "type": "string", "description": "客户端 SVN 目录（含 AsktaoH5 子目录）" },
+              "groupName": { "type": "string", "description": "区组名（config_auto_gen.bat 中「请输入区组名」的自动输入值）" }
+            },
+            "required": ["name"]
+          }
+        }
+      }
+    }
+  }
+}

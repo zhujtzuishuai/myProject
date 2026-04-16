@@ -1,0 +1,41 @@
+types:
+  roleFashion:
+    label: 角色时装
+    csvPath: AsktaoH5/res/cfg/csv/DecorateInfo.csv
+    csvModuleHeader: "# 角色时装模块"
+    csvRowFormat: "道具名;道具编号;图标;模型或特效图标;特效配置;单位;品质;类型;描述;来源;特殊备注;额外参数"
+    csvInsert:
+      mode: afterName # afterName | head | tail
+      afterName: 道载万金 # 仅 mode=afterName 时生效
+      ifNotFound: tail
+    item:
+      name: 道载万金
+      itemId: "530"
+      icon: decorate_fashion_35
+      modelOrEffectIcon: "90001"
+      effectConfig: ""
+      unit: 套
+      quality: 金色
+      type: fashion_icon
+      desc: 天命所归作金州，大道无形载乾坤。男子使用后将会身着华美的服饰。
+      source: "[一周年庆活动#@|MGFestivalActivityDlg=一周年庆#@]"
+      specialNote: ""
+      extraParam: ""
+    resMgr:
+      path: AsktaoH5/assets/scripts/mgr/ResMgr.ts
+      module: ui
+      key: decorate_fashion_35
+      value: "items/90001_50/texture"
+    configMgr:
+      path: AsktaoH5/assets/scripts/mgr/ConfigMgr.ts
+      variable: FashionConfig
+      appendPair: ["道载万金", "玲珑宝韵"]
+
+flow:
+  selectedType: roleFashion
+  steps:
+    - validateType
+    - updateDecorateInfoCsv
+    - updateResMgr
+    - updateConfigMgr
+    - summary

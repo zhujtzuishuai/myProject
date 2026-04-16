@@ -1,0 +1,56 @@
+{
+  "name": "asktao-tools",
+  "displayName": "AsktaoH5 Tools",
+  "description": "AsktaoH5 项目配置工具：快速添加角色时装等配置",
+  "version": "1.0.0",
+  "publisher": "asktao",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asktao/asktao-tools"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "asktao-tools.openPanel",
+        "title": "AsktaoH5: 打开配置工具"
+      },
+      {
+        "command": "asktao-tools.applyConfig",
+        "title": "AsktaoH5: 应用配置文件"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "asktao-tools.applyConfig",
+          "when": "resourceExtname == .yaml",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "@vscode/vsce": "^3.8.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.1"
+  }
+}
