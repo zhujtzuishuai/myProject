@@ -1,3 +1,0 @@
-道具名;道具编号;图标;模型或特效图标;特效配置;单位;品质;类型;描述;来源;特殊备注;额外参数
-name+;itemId;icon;icon2;effectCfg;unit;color;type;descript;sources;flag;extraParams;
-龙吟水;9;decorate_fashion_3;21003;;套;金色;fashion_icon;龙吟水上，凤鸣空野。;[商 城#@|MGShopDlg=item:#I外观装饰|龙吟水$gender=auto#I#@];;
