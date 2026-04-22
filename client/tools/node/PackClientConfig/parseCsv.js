@@ -15,6 +15,81 @@ function pathExists(p) {
     return true;
 }
 
+// 将 csv 基础类型名映射到 TypeScript 类型名
+const PRIMITIVE_TYPE_MAP = {
+    "string": "string",
+    "boolean": "boolean",
+    "bool": "boolean",
+    "number": "number",
+    "int": "number",
+    "float": "number",
+};
+
+/**
+ * 将类型字符串解析为类型 AST
+ * 支持：string | number | int | float | boolean | bool
+ *       T[]  (数组，可嵌套)
+ *       map<K,V>  (map，K/V 可嵌套)
+ * 返回：
+ *   { kind: 'primitive', name: string }
+ *   { kind: 'array', elem: TypeNode }
+ *   { kind: 'map', key: TypeNode, val: TypeNode }
+ */
+function parseType(str) {
+    str = str ? str.trim() : "";
+    if (!str) return { kind: "primitive", name: "" };
+
+    // map<K,V> 或 Record<K,V>
+    if ((str.startsWith("map<") || str.startsWith("Record<")) && str.endsWith(">")) {
+        const prefixLen = str.startsWith("map<") ? 4 : 7;
+        const inner = str.slice(prefixLen, -1);
+        // 在顶层找逗号（跳过嵌套尖括号）
+        let depth = 0;
+        let splitIdx = -1;
+        for (let i = 0; i < inner.length; i++) {
+            if (inner[i] === "<") depth++;
+            else if (inner[i] === ">") depth--;
+            else if (inner[i] === "," && depth === 0) {
+                splitIdx = i;
+                break;
+            }
+        }
+        if (splitIdx === -1) return { kind: "primitive", name: str };
+        return {
+            kind: "map",
+            key: parseType(inner.slice(0, splitIdx)),
+            val: parseType(inner.slice(splitIdx + 1)),
+        };
+    }
+
+    // T[]（可多层，如 number[][]）
+    if (str.endsWith("[]")) {
+        return { kind: "array", elem: parseType(str.slice(0, -2)) };
+    }
+
+    // 基础类型
+    return { kind: "primitive", name: str };
+}
+
+// 将类型 AST 转为 TypeScript 类型字符串
+function typeNodeToTs(node) {
+    if (!node) return "any";
+    if (node.kind === "array") {
+        const elemTs = typeNodeToTs(node.elem);
+        return `${elemTs}[]`;
+    }
+    if (node.kind === "map") {
+        const keyTs = typeNodeToTs(node.key);
+        const valTs = typeNodeToTs(node.val);
+        return `Record<${keyTs}, ${valTs}>`;
+    }
+    // primitive
+    return PRIMITIVE_TYPE_MAP[node.name] || "any";
+}
+
+exports.parseType = parseType;
+exports.typeNodeToTs = typeNodeToTs;
+
 class CsvMgr {
     static csv2jsonByDir(rootPath, map) {
         const children = fs.readdirSync(rootPath);
@@ -52,6 +127,7 @@ class CsvMgr {
         let lines = text.trim().split("\n");
         this.autoIndex = false;
         this.autoGenerate = false;
+        this.typeName = null;
         for (let i = lines.length - 1; i >= 0; i--) {
             if (lines[i].match(/^# /)) {
                 if (lines[i].match(/^# autoIndex/)) {
@@ -59,6 +135,10 @@ class CsvMgr {
                 }
                 if (lines[i].match(/^# autoGenerate/)) {
                     this.autoGenerate = true;
+                }
+                let typeNameMatch = lines[i].match(/^# typeName=(.+)/);
+                if (typeNameMatch) {
+                    this.typeName = typeNameMatch[1].trim();
                 }
                 lines.splice(i, 1);
             }
@@ -108,11 +188,13 @@ class CsvMgr {
         lines.push(line);
         return lines;
     }
+
     static analysisHeader(lines) {
+        this.varDescs = lines[0];
         this.varNames = lines[1];
         this.colKey = undefined;
         this.excludeColKey = false;
-        for (let i = 0; i <this.varNames.length; i++) {
+        for (let i = 0; i < this.varNames.length; i++) {
             let [_, key] = this.varNames[i].match(/(.+)\+/) || [null];
             if (key) {
                 this.varNames[i] = key;
@@ -132,8 +214,11 @@ class CsvMgr {
         } else {
             this.varTypes = [];
         }
+        // 预解析类型，供运行时转换使用
+        this.parsedVarTypes = this.varTypes.map(t => parseType(t ? t.trim() : ""));
         this.defaults = [];
     }
+
     static changeToArray(map) {
         let keys = [];
         for (let key in map) {
@@ -143,15 +228,16 @@ class CsvMgr {
         }
         keys.sort((l, r) => { return l - r });
         if (keys[0] != 0) return map;
-        for (let i =1; i< keys.length; i++) {
+        for (let i = 1; i < keys.length; i++) {
             if (keys[i] - keys[i - 1] != 1) return map;
         }
         let list = [];
-        for (let i = 0; i <keys.length; i++) {
+        for (let i = 0; i < keys.length; i++) {
             list.push(map[keys[i]]);
         }
         return list;
     }
+
     static analysisData(lines, index, map, dep) {
         if (!lines[index]) return index;
         let i = index;
@@ -183,7 +269,8 @@ class CsvMgr {
                             continue;
                         }
                     }
-                    value = this.getValue(value, this.varTypes[j]);
+                    const parsedType = this.parsedVarTypes ? this.parsedVarTypes[j] : null;
+                    value = this.getValueByType(value, parsedType);
                     if (!this.varNames[j] || this.varNames[j].length == 0) {
                         info[j] = value;
                     } else {
@@ -204,7 +291,7 @@ class CsvMgr {
                             if (k != this.colKey) {
                                 value = info[k];
                                 break;
-                            }                            
+                            }
                         }
                         map[info[key]] = value;
                     } else {
@@ -219,6 +306,7 @@ class CsvMgr {
         }
         return i;
     }
+
     static doEscapeChar(text) {
         let args = text.split("\\");
         for (let i = 1; i < args.length; i++) {
@@ -230,9 +318,69 @@ class CsvMgr {
         }
         return args.join("");
     }
+
+    /**
+     * 根据解析后的类型 AST 递归转换值
+     * 无类型或 primitive 时走原有逻辑
+     */
+    static getValueByType(value, node) {
+        if (!node || node.kind === "primitive") {
+            return this.getValue(value, node ? node.name : undefined);
+        }
+
+        if (node.kind === "array") {
+            // 支持 JSON 格式回退
+            if (value.match(/^JSON\[.+\]$/)) {
+                let [_, text] = value.match(/^JSON(\[.+\])$/) || ["", "[]"];
+                return JSON.parse(text);
+            }
+            if (value.match(/^\[.*\]$/)) {
+                const text = value.slice(1, -1);
+                if (!text.trim()) return [];
+                // 用逗号分割，但跳过嵌套括号内的逗号
+                const items = splitTopLevel(text, ",");
+                return items.map(item => this.getValueByType(item.trim(), node.elem));
+            }
+            return [];
+        }
+
+        if (node.kind === "map") {
+            // 支持 JSON 格式回退
+            if (value.match(/^JSON\{.+\}$/)) {
+                let [_, text] = value.match(/^JSON(\{.+\})$/) || ["", "{}"];
+                return JSON.parse(text);
+            }
+            if (value.match(/^\{.*\}$/)) {
+                const text = value.slice(1, -1);
+                if (!text.trim()) return {};
+                const pairs = splitTopLevel(text, ",");
+                const map = {};
+                for (const pair of pairs) {
+                    const colonIdx = findTopLevelIndex(pair, ":");
+                    if (colonIdx === -1) continue;
+                    const rawKey = pair.slice(0, colonIdx).trim();
+                    const rawVal = pair.slice(colonIdx + 1).trim();
+                    const typedKey = this.getValueByType(rawKey, node.key);
+                    const typedVal = this.getValueByType(rawVal, node.val);
+                    map[typedKey] = typedVal;
+                }
+                return map;
+            }
+            return {};
+        }
+
+        return this.getValue(value, undefined);
+    }
+
+    // 原有值解析，处理 primitive 类型和无类型场景
     static getValue(value, type) {
         if (type == "string") {
             return this.doEscapeChar(value);
+        } else if (type == "boolean" || type == "bool") {
+            return value === "true" || value === "1";
+        } else if (type == "number" || type == "int" || type == "float") {
+            let num = Number(value);
+            return isNaN(num) ? 0 : num;
         } else if (value.match(/^\[.+\]$/)) {
             let [_, text] = value.match(/^\[(.+)\]$/) || ["", ""];
             let paras = text.split(",");
@@ -268,10 +416,55 @@ class CsvMgr {
             else return this.doEscapeChar(value);
         }
     }
+
     static getKey(key) {
         let num = Number(key);
         if (num || num == 0) return num;
         return key;
     }
+
+    // 返回最近一次 csv2json 的类型元信息，供外部生成 .d.ts 使用
+    static getLastTypeInfo() {
+        return {
+            typeName: this.typeName,
+            varDescs: this.varDescs ? [...this.varDescs] : [],
+            varNames: this.varNames ? [...this.varNames] : [],
+            varTypes: this.varTypes ? [...this.varTypes] : [],
+            parsedVarTypes: this.parsedVarTypes ? [...this.parsedVarTypes] : [],
+            autoGenerate: this.autoGenerate,
+            autoIndex: this.autoIndex,
+        };
+    }
 }
+
+// 按顶层分隔符拆分字符串（跳过嵌套的 [] {} <> 内部）
+function splitTopLevel(str, sep) {
+    const result = [];
+    let depth = 0;
+    let start = 0;
+    for (let i = 0; i < str.length; i++) {
+        const c = str[i];
+        if (c === "[" || c === "{" || c === "<") depth++;
+        else if (c === "]" || c === "}" || c === ">") depth--;
+        else if (c === sep && depth === 0) {
+            result.push(str.slice(start, i));
+            start = i + 1;
+        }
+    }
+    result.push(str.slice(start));
+    return result;
+}
+
+// 找到顶层第一个指定字符的位置
+function findTopLevelIndex(str, ch) {
+    let depth = 0;
+    for (let i = 0; i < str.length; i++) {
+        const c = str[i];
+        if (c === "[" || c === "{" || c === "<") depth++;
+        else if (c === "]" || c === "}" || c === ">") depth--;
+        else if (c === ch && depth === 0) return i;
+    }
+    return -1;
+}
+
 exports.CsvMgr = CsvMgr;
