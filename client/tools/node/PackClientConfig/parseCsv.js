@@ -18,17 +18,25 @@ function pathExists(p) {
 
 /**
  * 将类型字符串解析为类型 AST
- * 支持：string | number | boolean
- *       T[]  (数组，可嵌套)
+ * 支持：任意 TS 类型名（string | number | boolean | null | undefined | ...）
+ *       T[]    (数组，可嵌套)
  *       Record<K,V>  (可嵌套)
+ *       末尾加 ! 表示跳过运行时类型校验（如 string!）
  * 返回：
- *   { type: 'primitive', name: string }
- *   { type: 'array', elem: TypeNode }
- *   { type: 'record', key: TypeNode, val: TypeNode }
+ *   { type: 'primitive', name: string, skipCheck?: true }
+ *   { type: 'array', elem: TypeNode, skipCheck?: true }
+ *   { type: 'record', key: TypeNode, val: TypeNode, skipCheck?: true }
  */
 function parseType(str) {
     str = str ? str.trim() : "";
     if (!str) return { type: "primitive", name: "" };
+
+    // 跳过类型检查标记
+    let skipCheck = false;
+    if (str.endsWith("!")) {
+        skipCheck = true;
+        str = str.slice(0, -1).trim();
+    }
 
     // Record<K,V>
     if (str.startsWith("Record<") && str.endsWith(">")) {
@@ -40,21 +48,22 @@ function parseType(str) {
             else if (inner[i] === ">") depth--;
             else if (inner[i] === "," && depth === 0) { splitIdx = i; break; }
         }
-        if (splitIdx === -1) return { type: "primitive", name: str };
+        if (splitIdx === -1) return { type: "primitive", name: str, skipCheck };
         return {
             type: "record",
             key: parseType(inner.slice(0, splitIdx)),
             val: parseType(inner.slice(splitIdx + 1)),
+            skipCheck,
         };
     }
 
     // T[]（可多层，如 number[][]）
     if (str.endsWith("[]")) {
-        return { type: "array", elem: parseType(str.slice(0, -2)) };
+        return { type: "array", elem: parseType(str.slice(0, -2)), skipCheck };
     }
 
     // 基础类型
-    return { type: "primitive", name: str };
+    return { type: "primitive", name: str, skipCheck };
 }
 
 /** 检查类型字符串是否合法（递归验证 AST） */
@@ -67,11 +76,11 @@ function isValidTypeNode(node) {
     if (!node) return false;
     if (node.type === "array") return isValidTypeNode(node.elem);
     if (node.type === "record") return isValidTypeNode(node.key) && isValidTypeNode(node.val);
-    // primitive：只接受已知的 TS 基础类型
-    return node.name === "string" || node.name === "number" || node.name === "boolean";
+    // primitive：非空字符串即合法（支持任意 TS 类型名）
+    return typeof node.name === "string" && node.name.length > 0;
 }
 
-/** 将类型 AST 转为 TypeScript 类型字符串 */
+/** 将类型 AST 转为 TypeScript 类型字符串（忽略 skipCheck 标记） */
 function typeNodeToTs(node) {
     if (!node) return "any";
     if (node.type === "array") return `${typeNodeToTs(node.elem)}[]`;
@@ -361,7 +370,14 @@ class CsvMgr {
      */
     static getValueByType(value, node, colName) {
         if (!node || node.type === "primitive") {
+            if (node && node.skipCheck) return value;
             return this.getValue(value, node ? node.name : undefined, colName);
+        }
+
+        if (node.skipCheck) return value;
+
+        if (node.type === "union") {
+            this._throwTypeError(value, typeNodeToTs(node), colName);
         }
 
         if (node.type === "array") {

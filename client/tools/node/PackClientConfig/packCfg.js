@@ -27,8 +27,6 @@ class PackCfgMgr {
     /**
      * 解析现有 .d.ts 文件，返回以 fileName 为 key 的 interface 块 Map
      * 每个块包含 @source 注释行 + interface 内容行（含首尾括号行）
-     * @param {string} content
-     * @returns {Map<string, string[]>}
      */
     static _parseDtsBlocks(content) {
         const blocks = new Map();
@@ -61,8 +59,6 @@ class PackCfgMgr {
 
     /**
      * 根据单个 typeInfo 构建 interface 块的行数组
-     * @param {Object} info
-     * @returns {string[]}
      */
     static _buildInterfaceBlock(info) {
         const interfaceName = info.typeName
@@ -70,6 +66,10 @@ class PackCfgMgr {
         const block = [];
         block.push(`    /** @source ${info.fileName}.csv */`);
         block.push(`    interface ${interfaceName} {`);
+        if (info.autoIndex) {
+            block.push(`        /** 自动生成的索引（从 0 开始） */`);
+            block.push(`        index: number;`);
+        }
         for (let i = 0; i < info.varNames.length; i++) {
             const name = info.varNames[i];
             if (!name || name.length === 0) continue;
@@ -80,7 +80,6 @@ class PackCfgMgr {
             if (desc && desc.trim()) block.push(`        /** ${desc.trim()} */`);
             block.push(`        ${cleanName}${optional}: ${tsType};`);
         }
-        if (info.autoIndex) block.push(`        index: number;`);
         block.push(`    }`);
         return block;
     }
@@ -89,7 +88,6 @@ class PackCfgMgr {
      * 增量更新 .d.ts 声明文件：
      * - 有 # genType 的 csv：已存在则更新，不存在则追加到末尾
      * - 失去 # genType 的 csv：保留原有 interface 块不动
-     * @param {Object[]} typeInfoList
      */
     static generateDts(typeInfoList) {
         const dtsPath = path.join(CLIENT_ROOT, "@types/autoCfg.d.ts");
