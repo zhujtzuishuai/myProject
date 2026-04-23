@@ -1,0 +1,30 @@
+{
+  "name": "feature-checker",
+  "displayName": "Feature Checker",
+  "description": "功能配置完备性检查工具",
+  "version": "2.4.0",
+  "publisher": "asktao",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "feature-checker.openPanel",
+        "title": "Feature Checker: 打开功能检查器"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "@vscode/vsce": "^3.8.0",
+    "typescript": "^5.0.0"
+  }
+}

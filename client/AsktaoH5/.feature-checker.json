@@ -1,0 +1,28 @@
+{
+  "resMgr": {
+    "filePath": "assets\\scripts\\mgr\\ResMgr.ts",
+    "modulePath": "ui"
+  },
+  "features": {
+    "1776429280095": {
+      "label": "唤灵检查",
+      "inputs": [
+        {
+          "key": "a_1",
+          "label": "123",
+          "placeholder": "1"
+        }
+      ],
+      "steps": [
+        {
+          "id": "1776451126315",
+          "type": "resMgrKey",
+          "label": "ResMgr Key",
+          "required": true,
+          "keyTemplate": "{{a_1}}",
+          "modulePath": "ui"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+名字;icon;类型;相性;血量;速度;物攻;法功;来源;强化石来源;类型
+# genType
+name;icon;rank;polar;life;speed;phy_attack;mag_attack;sources;strSources;type
+string;number;number;number;number;number;number;number;string;Record<string, number>;Record<string, number[]>;
+测试1;123;1;1;1;1;1;1;1;{123:4, abc: 5};{a:[1,2,3], b:[4,5,6]}
+测试1;124;1;1;1;1;1;1;1;{123:4, abc: 5};{a:[1,2,3], b:[4,5,6]}
+测试1;125;1;1;1;1;1;1;1;{123:4, abc: 5};{a:[1,2,3], b:[4,5,6]}
+测试1;126;1;1;1;1;1;1;1;{123:4, abc: 5};{a:[1,2,3], b:[4,5,6]}
+测试1;127;1;1;1;1;1;1;1;{123:4, abc: 5};{a:[1,2,3], b:[4,5,6]}
