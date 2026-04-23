@@ -11,30 +11,17 @@ class PackCfgMgr {
     }
 
     static doPackCfg() {
-        const map = {};
-        const typeInfoList = [];
-        this.doPackCfgCsv(map, typeInfoList);
+        const { map, typeInfoList } = this.doPackCfgCsv();
 
         const cfgsPath = path.join(CLIENT_ROOT, "res/cfgs.json");
         fs.writeFileSync(cfgsPath, JSON.stringify(map));
-        console.log(`[PackCfg] 已生成配置数据: ${cfgsPath}`);
 
         this.generateDts(typeInfoList);
     }
 
-    static doPackCfgCsv(out, typeInfoList) {
+    static doPackCfgCsv() {
         const rootPath = path.join(CLIENT_ROOT, "res/cfg/csv");
-        // 实际打包：写入 map 并生成 .temp 中间文件（内部会调用 csv2json）
-        CsvMgr.csv2jsonByDir(rootPath, out);
-        // 提取每个文件的类型元信息（csv2jsonByDir 内已逐文件调用 csv2json，最后一次状态已覆盖）
-        // 重新逐文件解析一次以收集各自的类型信息
-        for (const child of fs.readdirSync(rootPath).sort()) {
-            if (!child.match(/\w.csv$/)) continue;
-            CsvMgr.csv2json(child, rootPath);
-            const info = CsvMgr.getLastTypeInfo();
-            info.fileName = child.replace(".csv", "");
-            typeInfoList.push(info);
-        }
+        return CsvMgr.csv2jsonByDir(rootPath);
     }
 
     /**
@@ -112,11 +99,9 @@ class PackCfgMgr {
         const existingBlocks = oldContent ? this._parseDtsBlocks(oldContent) : new Map();
 
         // 以现有块为基础，更新有 genType 的文件
-        const updatedFileNames = new Set();
         for (const info of typeInfoList) {
             if (!info.genType) continue;
             existingBlocks.set(info.fileName, this._buildInterfaceBlock(info));
-            updatedFileNames.add(info.fileName);
         }
 
         // 重新组装文件：保留所有块（含未更新的），新增的追加在末尾（已由 Map 顺序保证）
@@ -134,9 +119,6 @@ class PackCfgMgr {
         const newContent = lines.join("\n");
         if (oldContent !== newContent) {
             fs.writeFileSync(dtsPath, newContent);
-            console.log(`[PackCfg] 已生成类型声明: ${dtsPath}`);
-        } else {
-            console.log(`[PackCfg] 类型声明无变化，跳过写入`);
         }
     }
 }

@@ -28,31 +28,4 @@ declare namespace Cfg {
         /** 额外参数 */
         extraParams?: string;
     }
-
-    /** @source PetList.csv */
-    interface PetListCfg {
-        /** 名字 */
-        name: string;
-        /** icon */
-        icon: number;
-        /** 类型 */
-        rank: number;
-        /** 相性 */
-        polar: number;
-        /** 血量 */
-        life: number;
-        /** 速度 */
-        speed: number;
-        /** 物攻 */
-        phy_attack: number;
-        /** 法功 */
-        mag_attack: number;
-        /** 来源 */
-        sources: string;
-        /** 强化石来源 */
-        strSources: Record<string, number>;
-        /** 类型 */
-        type: Record<string, number[]>;
-    }
-
 }

@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true});
-exports.csvMgr = void 0;
 const path = require("path");
 const fs = require("fs");
 
@@ -81,25 +79,32 @@ function typeNodeToTs(node) {
     return node.name || "any";
 }
 
-exports.parseType = parseType;
-exports.typeNodeToTs = typeNodeToTs;
-
 class CsvMgr {
     /**
-     * 批量解析目录下所有 CSV 文件，结果写入 map
+     * 批量解析目录下所有 CSV 文件
      * @param {string} rootPath - CSV 文件目录
-     * @param {Object} map - 输出 map，key 格式为 "cfg/文件名"
+     * @returns {{ map: Object, typeInfoList: Object[] }}
      */
-    static csv2jsonByDir(rootPath, map) {
+    static csv2jsonByDir(rootPath) {
         const tempDir = path.join(rootPath, ".temp");
         if (!pathExists(tempDir)) fs.mkdirSync(tempDir);
+
+        const map = {};
+        const typeInfoList = [];
+
         for (const child of fs.readdirSync(rootPath).sort()) {
             if (!child.match(/\w.csv$/)) continue;
             const key = child.replace(".csv", "");
-            const content = CsvMgr.csv2json(child, rootPath);
-            map["cfg/" + key] = content;
-            fs.writeFileSync(path.join(tempDir, key + ".json"), JSON.stringify(content));
+
+            const { data, typeInfo } = CsvMgr.csv2json(child, rootPath);
+            typeInfo.fileName = key;
+            map["cfg/" + key] = data;
+            typeInfoList.push(typeInfo);
+
+            fs.writeFileSync(path.join(tempDir, key + ".json"), JSON.stringify(data));
         }
+
+        return { map, typeInfoList };
     }
 
     /**
@@ -117,9 +122,20 @@ class CsvMgr {
             const lines = this.getCsvLines(path.join(rootPath, file));
             this.analysisHeader(lines);
             const map = {};
-            this.propType = {};
             this.analysisData(lines, this.genType ? 3 : 2, map, 0);
-            return this.changeToArray(map);
+            const data = this.changeToArray(map);
+            const typeInfo = {
+                typeName: this.typeName,
+                varDescs: this.varDescs ? [...this.varDescs] : [],
+                varNames: this.varNames ? [...this.varNames] : [],
+                varTypes: this.varTypes ? [...this.varTypes] : [],
+                parsedVarTypes: this.parsedVarTypes ? [...this.parsedVarTypes] : [],
+                genType: this.genType,
+                autoIndex: this.autoIndex,
+                groupKey: this.groupKey,
+                optionalCols: this.optionalCols ? new Set(this.optionalCols) : new Set(),
+            };
+            return { data, typeInfo };
         } catch (e) {
             console.error(`[ParseCsv] 解析失败: ${file} — ${e.message}`);
             throw e;
@@ -436,21 +452,6 @@ class CsvMgr {
         return key;
     }
 
-    /** 返回最近一次 csv2json 的类型元信息，供外部生成 .d.ts 使用 */
-    static getLastTypeInfo() {
-        return {
-            typeName: this.typeName,
-            varDescs: this.varDescs ? [...this.varDescs] : [],
-            varNames: this.varNames ? [...this.varNames] : [],
-            varTypes: this.varTypes ? [...this.varTypes] : [],
-            parsedVarTypes: this.parsedVarTypes ? [...this.parsedVarTypes] : [],
-            genType: this.genType,
-            autoIndex: this.autoIndex,
-            groupKey: this.groupKey,
-            // 出现过空值的列索引集合，生成 .d.ts 时标记为可选字段
-            optionalCols: this.optionalCols ? new Set(this.optionalCols) : new Set(),
-        };
-    }
 }
 
 // 按顶层分隔符拆分字符串（跳过嵌套的 [] {} <> 内部）
@@ -483,4 +484,6 @@ function findTopLevelIndex(str, ch) {
     return -1;
 }
 
+exports.parseType = parseType;
+exports.typeNodeToTs = typeNodeToTs;
 exports.CsvMgr = CsvMgr;
