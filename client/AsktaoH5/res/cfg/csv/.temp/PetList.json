@@ -1,1 +1,15 @@
-{"group1":[{"fieldA":1},{"fieldA":2}],"group2":[{"fieldA":3}]}
+{
+    "group1": [
+        {
+            "fieldA": 1
+        },
+        {
+            "fieldA": 2
+        }
+    ],
+    "group2": [
+        {
+            "fieldA": 3
+        }
+    ]
+}

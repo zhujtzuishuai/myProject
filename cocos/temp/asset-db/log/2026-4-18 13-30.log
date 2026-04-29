@@ -1,0 +1,392 @@
+2026-4-18 13:30:13-debug: start **** info
+2026-4-18 13:30:13-log: Cannot access game frame or container.
+2026-4-18 13:30:14-debug: asset-db:require-engine-code (751ms)
+2026-4-18 13:30:14-log: [box2d]:box2d wasm lib loaded.
+2026-4-18 13:30:14-log: meshopt wasm decoder initialized
+2026-4-18 13:30:14-log: [bullet]:bullet wasm lib loaded.
+2026-4-18 13:30:14-log: Cocos Creator v3.8.6
+2026-4-18 13:30:14-log: Using legacy pipeline
+2026-4-18 13:30:14-log: Forward render pipeline initialized.
+2026-4-18 13:30:14-debug: [Assets Memory track]: asset-db:worker-init: initEngine start:31.13MB, end 80.23MB, increase: 49.10MB
+2026-4-18 13:30:16-debug: [Assets Memory track]: asset-db-plugin-register: engine-extends start:225.34MB, end 228.45MB, increase: 3.12MB
+2026-4-18 13:30:14-debug: [Assets Memory track]: asset-db-plugin-register: programming start:81.33MB, end 84.11MB, increase: 2.79MB
+2026-4-18 13:30:16-debug: [Assets Memory track]: asset-db-plugin-register: builder start:84.16MB, end 225.09MB, increase: 140.93MB
+2026-4-18 13:30:16-debug: [Assets Memory track]: asset-db:worker-init: initPlugin start:80.25MB, end 228.68MB, increase: 148.43MB
+2026-4-18 13:30:16-debug: [Assets Memory track]: asset-db-plugin-register: project start:81.18MB, end 228.65MB, increase: 147.47MB
+2026-4-18 13:30:16-debug: run package(cocos-service) handler(enable) start
+2026-4-18 13:30:16-debug: run package(cocos-service) handler(enable) success!
+2026-4-18 13:30:16-debug: run package(im-plugin) handler(enable) start
+2026-4-18 13:30:16-debug: run package(im-plugin) handler(enable) success!
+2026-4-18 13:30:16-debug: run package(fix-asset-default-userdata) handler(enable) start
+2026-4-18 13:30:16-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 13:30:16-debug: run package(fix-asset-default-userdata) handler(enable) success!
+2026-4-18 13:30:16-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 13:30:16-debug: run package(placeholder) handler(enable) start
+2026-4-18 13:30:16-debug: run package(placeholder) handler(enable) success!
+2026-4-18 13:30:16-debug: asset-db:worker-init: initPlugin (1719ms)
+2026-4-18 13:30:16-debug: Run asset db hook programming:beforePreStart success!
+2026-4-18 13:30:16-debug: [Assets Memory track]: asset-db:worker-init start:31.12MB, end 225.03MB, increase: 193.91MB
+2026-4-18 13:30:16-debug: Run asset db hook programming:beforePreStart ...
+2026-4-18 13:30:16-debug: Run asset db hook engine-extends:beforePreStart ...
+2026-4-18 13:30:16-debug: Run asset db hook engine-extends:beforePreStart success!
+2026-4-18 13:30:16-debug: asset-db:worker-init (2980ms)
+2026-4-18 13:30:16-debug: asset-db-hook-programming-beforePreStart (240ms)
+2026-4-18 13:30:16-debug: asset-db-hook-engine-extends-beforePreStart (239ms)
+2026-4-18 13:30:16-debug: Preimport db internal success
+2026-4-18 13:30:16-debug: Run asset db hook programming:afterPreStart ...
+2026-4-18 13:30:16-debug: Preimport db assets success
+2026-4-18 13:30:16-debug: starting packer-driver...
+2026-4-18 13:30:17-debug: initialize scripting environment...
+2026-4-18 13:30:17-debug: [[Executor]] prepare before lock
+2026-4-18 13:30:17-debug: Set detail map pack:///resolution-detail-map.json: {}
+2026-4-18 13:30:17-debug: [[Executor]] prepare after unlock
+2026-4-18 13:30:17-debug: Run asset db hook engine-extends:afterPreStart ...
+2026-4-18 13:30:17-debug: Run asset db hook programming:afterPreStart success!
+2026-4-18 13:30:17-debug: Run asset db hook engine-extends:afterPreStart success!
+2026-4-18 13:30:17-debug: [Assets Memory track]: asset-db:worker-init: preStart start:225.04MB, end 231.32MB, increase: 6.27MB
+2026-4-18 13:30:17-debug: Start up the 'internal' database...
+2026-4-18 13:30:17-debug: asset-db-hook-programming-afterPreStart (813ms)
+2026-4-18 13:30:17-debug: asset-db:worker-effect-data-processing (387ms)
+2026-4-18 13:30:17-debug: asset-db-hook-engine-extends-afterPreStart (387ms)
+2026-4-18 13:30:17-debug: Start up the 'assets' database...
+2026-4-18 13:30:17-debug: [Assets Memory track]: asset-db:worker-startup-database[internal] start:225.14MB, end 242.77MB, increase: 17.63MB
+2026-4-18 13:30:17-debug: asset-db:worker-startup-database[internal] (1256ms)
+2026-4-18 13:30:17-debug: lazy register asset handler *
+2026-4-18 13:30:17-debug: [Assets Memory track]: asset-db:worker-startup-database[assets] start:230.50MB, end 242.90MB, increase: 12.40MB
+2026-4-18 13:30:17-debug: lazy register asset handler text
+2026-4-18 13:30:17-debug: lazy register asset handler json
+2026-4-18 13:30:17-debug: [Assets Memory track]: asset-db:worker-init: startup start:231.33MB, end 242.91MB, increase: 11.58MB
+2026-4-18 13:30:17-debug: lazy register asset handler spine-data
+2026-4-18 13:30:17-debug: lazy register asset handler dragonbones
+2026-4-18 13:30:17-debug: lazy register asset handler directory
+2026-4-18 13:30:17-debug: lazy register asset handler dragonbones-atlas
+2026-4-18 13:30:17-debug: lazy register asset handler terrain
+2026-4-18 13:30:17-debug: lazy register asset handler javascript
+2026-4-18 13:30:17-debug: lazy register asset handler typescript
+2026-4-18 13:30:17-debug: lazy register asset handler prefab
+2026-4-18 13:30:17-debug: lazy register asset handler scene
+2026-4-18 13:30:17-debug: lazy register asset handler sprite-frame
+2026-4-18 13:30:17-debug: lazy register asset handler tiled-map
+2026-4-18 13:30:17-debug: lazy register asset handler buffer
+2026-4-18 13:30:17-debug: lazy register asset handler texture
+2026-4-18 13:30:17-debug: lazy register asset handler image
+2026-4-18 13:30:17-debug: lazy register asset handler texture-cube
+2026-4-18 13:30:17-debug: lazy register asset handler sign-image
+2026-4-18 13:30:17-debug: lazy register asset handler alpha-image
+2026-4-18 13:30:17-debug: lazy register asset handler erp-texture-cube
+2026-4-18 13:30:17-debug: lazy register asset handler render-texture
+2026-4-18 13:30:17-debug: lazy register asset handler texture-cube-face
+2026-4-18 13:30:17-debug: lazy register asset handler rt-sprite-frame
+2026-4-18 13:30:17-debug: lazy register asset handler gltf
+2026-4-18 13:30:17-debug: lazy register asset handler gltf-mesh
+2026-4-18 13:30:17-debug: lazy register asset handler gltf-animation
+2026-4-18 13:30:17-debug: lazy register asset handler gltf-skeleton
+2026-4-18 13:30:17-debug: lazy register asset handler gltf-scene
+2026-4-18 13:30:17-debug: lazy register asset handler gltf-material
+2026-4-18 13:30:17-debug: lazy register asset handler gltf-embeded-image
+2026-4-18 13:30:17-debug: lazy register asset handler fbx
+2026-4-18 13:30:17-debug: lazy register asset handler material
+2026-4-18 13:30:17-debug: lazy register asset handler effect
+2026-4-18 13:30:17-debug: lazy register asset handler effect-header
+2026-4-18 13:30:17-debug: lazy register asset handler physics-material
+2026-4-18 13:30:17-debug: lazy register asset handler audio-clip
+2026-4-18 13:30:17-debug: lazy register asset handler animation-clip
+2026-4-18 13:30:17-debug: lazy register asset handler animation-graph
+2026-4-18 13:30:17-debug: lazy register asset handler animation-graph-variant
+2026-4-18 13:30:17-debug: lazy register asset handler animation-mask
+2026-4-18 13:30:17-debug: lazy register asset handler ttf-font
+2026-4-18 13:30:17-debug: lazy register asset handler particle
+2026-4-18 13:30:17-debug: lazy register asset handler bitmap-font
+2026-4-18 13:30:17-debug: lazy register asset handler sprite-atlas
+2026-4-18 13:30:17-debug: lazy register asset handler auto-atlas
+2026-4-18 13:30:17-debug: lazy register asset handler label-atlas
+2026-4-18 13:30:17-debug: lazy register asset handler render-pipeline
+2026-4-18 13:30:17-debug: lazy register asset handler render-flow
+2026-4-18 13:30:17-debug: lazy register asset handler instantiation-material
+2026-4-18 13:30:17-debug: lazy register asset handler instantiation-mesh
+2026-4-18 13:30:17-debug: lazy register asset handler instantiation-animation
+2026-4-18 13:30:17-debug: lazy register asset handler instantiation-skeleton
+2026-4-18 13:30:17-debug: lazy register asset handler render-stage
+2026-4-18 13:30:17-debug: lazy register asset handler video-clip
+2026-4-18 13:30:17-debug: fix the bug of updateDefaultUserData
+2026-4-18 13:30:17-debug: asset-db:worker-startup-database[assets] (972ms)
+2026-4-18 13:30:17-debug: asset-db:start-database (1311ms)
+2026-4-18 13:30:17-debug: init worker message success
+2026-4-18 13:30:17-debug: asset-db:ready (6894ms)
+2026-4-18 13:30:17-debug: programming:execute-script (4ms)
+2026-4-18 13:30:18-debug: [Build Memory track]: builder:worker-init start:241.06MB, end 254.86MB, increase: 13.80MB
+2026-4-18 13:30:18-debug: builder:worker-init (423ms)
+2026-4-18 13:30:38-debug: refresh db internal success
+2026-4-18 13:30:38-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:30:38-debug: refresh db assets success
+2026-4-18 13:30:38-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:30:38-debug: asset-db:refresh-all-database (236ms)
+2026-4-18 13:32:11-debug: refresh db internal success
+2026-4-18 13:32:11-debug: refresh db assets success
+2026-4-18 13:32:11-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:32:11-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:32:11-debug: asset-db:refresh-all-database (228ms)
+2026-4-18 13:32:11-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:32:11-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+2026-4-18 13:32:27-debug: refresh db internal success
+2026-4-18 13:32:27-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:32:27-debug: refresh db assets success
+2026-4-18 13:32:27-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:32:27-debug: asset-db:refresh-all-database (235ms)
+2026-4-18 13:32:43-debug: refresh db internal success
+2026-4-18 13:32:43-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:32:43-debug: refresh db assets success
+2026-4-18 13:32:43-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:32:43-debug: asset-db:refresh-all-database (223ms)
+2026-4-18 13:32:43-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 13:33:24-debug: refresh db internal success
+2026-4-18 13:33:24-debug: %cImport%c: C:\myProject\cocos\assets\imagesbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:33:24-debug: %cImport%c: C:\myProject\cocos\assets\images\red.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:33:24-debug: %cImport%c: C:\myProject\cocos\assets\images\red.png@6c48abackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:33:24-debug: refresh db assets success
+2026-4-18 13:33:24-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:33:24-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:33:24-debug: asset-db:refresh-all-database (231ms)
+2026-4-18 13:33:24-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:33:24-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:33:30-debug: refresh db internal success
+2026-4-18 13:33:30-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:33:30-debug: refresh db assets success
+2026-4-18 13:33:30-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:33:30-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:33:30-debug: asset-db:refresh-all-database (228ms)
+2026-4-18 13:33:30-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+2026-4-18 13:34:07-debug: refresh db internal success
+2026-4-18 13:34:07-debug: refresh db assets success
+2026-4-18 13:34:07-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:34:07-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:34:07-debug: asset-db:refresh-all-database (220ms)
+2026-4-18 13:34:07-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:34:07-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:39:35-debug: refresh db internal success
+2026-4-18 13:39:35-debug: refresh db assets success
+2026-4-18 13:39:35-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:39:35-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:39:35-debug: asset-db:refresh-all-database (233ms)
+2026-4-18 13:39:35-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:39:35-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:39:40-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 13:39:40-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 13:39:41-debug: run package(prefab-finder) handler(register) start
+2026-4-18 13:39:41-debug: run package(prefab-finder) handler(register) success!
+2026-4-18 13:39:41-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 13:39:41-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 13:39:50-debug: refresh db internal success
+2026-4-18 13:39:50-debug: refresh db assets success
+2026-4-18 13:39:50-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:39:50-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:39:50-debug: asset-db:refresh-all-database (231ms)
+2026-4-18 13:39:50-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:39:50-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:39:55-debug: refresh db internal success
+2026-4-18 13:39:55-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:39:55-debug: refresh db assets success
+2026-4-18 13:39:55-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:39:55-debug: asset-db:refresh-all-database (230ms)
+2026-4-18 13:39:55-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:39:55-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:40:00-debug: refresh db internal success
+2026-4-18 13:40:00-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:40:00-debug: refresh db assets success
+2026-4-18 13:40:00-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:40:00-debug: asset-db:refresh-all-database (230ms)
+2026-4-18 13:40:00-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:40:00-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:54:29-debug: refresh db internal success
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_blue.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\images\icon_diamond.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\images\frame_border.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\images\icon_star.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\ui\btn_cancel.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\ui\btn_confirm.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\ui\btn_start.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\ui\item_star.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\ui\item_diamond.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\ui\reward_panel.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\imagesbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: %cImport%c: C:\myProject\cocos\assets\uibackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:54:29-debug: refresh db assets success
+2026-4-18 13:54:29-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:54:29-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:54:29-debug: asset-db:refresh-all-database (300ms)
+2026-4-18 13:54:29-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:54:29-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 13:58:55-debug: refresh db internal success
+2026-4-18 13:58:55-debug: refresh db assets success
+2026-4-18 13:58:55-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:58:55-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:58:55-debug: asset-db:refresh-all-database (233ms)
+2026-4-18 13:58:55-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:58:55-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 14:02:17-debug: refresh db internal success
+2026-4-18 14:02:17-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:02:17-debug: refresh db assets success
+2026-4-18 14:02:17-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:02:17-debug: asset-db:refresh-all-database (239ms)
+2026-4-18 14:02:20-debug: %cImport%c: C:\myProject\cocos\assets\ui\item_star.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 14:02:20-debug: asset-db:reimport-assetb1234567-0004-4000-8000-000000000004 (6ms)
+2026-4-18 14:02:21-debug: refresh db internal success
+2026-4-18 14:02:21-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:02:21-debug: refresh db assets success
+2026-4-18 14:02:21-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:02:21-debug: asset-db:refresh-all-database (253ms)
+2026-4-18 14:02:21-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 14:02:38-debug: %cImport%c: C:\myProject\cocos\assets\ui\btn_cancel.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 14:02:38-debug: asset-db:reimport-assetb1234567-0002-4000-8000-000000000002 (5ms)
+2026-4-18 14:02:39-debug: refresh db internal success
+2026-4-18 14:02:39-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:02:39-debug: refresh db assets success
+2026-4-18 14:02:39-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:02:39-debug: asset-db:refresh-all-database (239ms)
+2026-4-18 14:04:52-debug: refresh db internal success
+2026-4-18 14:04:52-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:04:52-debug: refresh db assets success
+2026-4-18 14:04:52-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:04:52-debug: asset-db:refresh-all-database (235ms)
+2026-4-18 14:04:52-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 14:08:09-debug: refresh db internal success
+2026-4-18 14:08:09-debug: refresh db assets success
+2026-4-18 14:08:09-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:08:09-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:08:09-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 14:08:09-debug: asset-db:refresh-all-database (229ms)
+2026-4-18 14:08:09-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 14:08:16-debug: refresh db internal success
+2026-4-18 14:08:16-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:08:16-debug: refresh db assets success
+2026-4-18 14:08:16-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:08:16-debug: asset-db:refresh-all-database (234ms)
+2026-4-18 14:08:16-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 14:08:16-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 14:08:25-debug: refresh db internal success
+2026-4-18 14:08:25-debug: refresh db assets success
+2026-4-18 14:08:25-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:08:25-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:08:25-debug: asset-db:refresh-all-database (226ms)
+2026-4-18 14:08:25-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 14:08:25-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 14:08:39-debug: refresh db internal success
+2026-4-18 14:08:39-debug: refresh db assets success
+2026-4-18 14:08:39-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:08:39-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:08:39-debug: asset-db:refresh-all-database (268ms)
+2026-4-18 14:08:39-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 14:08:39-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 14:08:43-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 14:08:43-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.png@6c48abackground: #aaff85; color: #000;color: #000;
+2026-4-18 14:08:43-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.png@f9941background: #aaff85; color: #000;color: #000;
+2026-4-18 14:08:43-error: TypeError: Cannot read properties of null (reading 'rawPosition')    at initVerticesData (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\handler\assets\sprite-frame.ccc:1:2230)    at import (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\handler\assets\sprite-frame.ccc:1:5226)    at CustomImporter.import (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\manager\asset-handler-manager.ccc:1:1243)
+2026-4-18 14:08:43-error: Importer exec failed: {asset[C:\myProject\cocos\assets\images\btn_green.png@f9941](a1234567-0002-4000-8000-000000000002@f9941)}
+2026-4-18 14:08:43-debug: asset-db:reimport-asseta1234567-0002-4000-8000-000000000002 (23ms)
+2026-4-18 14:09:06-debug: refresh db internal success
+2026-4-18 14:09:06-debug: refresh db assets success
+2026-4-18 14:09:06-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:09:06-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:09:06-debug: asset-db:refresh-all-database (229ms)
+2026-4-18 14:09:06-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 14:09:06-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+2026-4-18 14:09:12-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 14:09:12-debug: %cReImport%c: C:\myProject\cocos\assets\images\btn_green.png@6c48abackground: #aaff85; color: #000;color: #000;
+2026-4-18 14:09:12-debug: asset-db:reimport-asseta1234567-0002-4000-8000-000000000002 (9ms)
+2026-4-18 14:09:59-debug: refresh db internal success
+2026-4-18 14:09:59-debug: refresh db assets success
+2026-4-18 14:09:59-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:09:59-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:09:59-debug: asset-db:refresh-all-database (223ms)
+2026-4-18 14:10:01-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 14:10:01-debug: %cReImport%c: C:\myProject\cocos\assets\images\btn_green.png@6c48abackground: #aaff85; color: #000;color: #000;
+2026-4-18 14:10:01-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.png@f9941background: #aaff85; color: #000;color: #000;
+2026-4-18 14:10:01-error: TypeError: Cannot read properties of null (reading 'rawPosition')    at initVerticesData (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\handler\assets\sprite-frame.ccc:1:2230)    at import (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\handler\assets\sprite-frame.ccc:1:5226)    at CustomImporter.import (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\manager\asset-handler-manager.ccc:1:1243)
+2026-4-18 14:10:01-error: Importer exec failed: {asset[C:\myProject\cocos\assets\images\btn_green.png@f9941](a1234567-0002-4000-8000-000000000002@f9941)}
+2026-4-18 14:10:01-debug: asset-db:reimport-asseta1234567-0002-4000-8000-000000000002 (19ms)
+2026-4-18 14:10:07-debug: refresh db internal success
+2026-4-18 14:10:07-debug: refresh db assets success
+2026-4-18 14:10:07-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 14:10:07-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 14:10:07-debug: asset-db:refresh-all-database (220ms)
+2026-4-18 14:10:07-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 14:10:07-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 16:38:09-debug: refresh db internal success
+2026-4-18 16:38:09-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_blue.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:38:09-debug: %cImport%c: C:\myProject\cocos\assets\images\icon_diamond.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:38:09-debug: %cImport%c: C:\myProject\cocos\assets\images\frame_border.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:38:09-debug: %cImport%c: C:\myProject\cocos\assets\images\icon_star.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:38:09-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:38:09-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 16:38:09-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 16:38:09-debug: refresh db assets success
+2026-4-18 16:38:09-debug: asset-db:refresh-all-database (254ms)
+2026-4-18 16:38:09-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 16:38:09-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 16:38:24-debug: refresh db internal success
+2026-4-18 16:38:24-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 16:38:24-debug: refresh db assets success
+2026-4-18 16:38:24-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 16:38:24-debug: asset-db:refresh-all-database (224ms)
+2026-4-18 16:38:24-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 16:38:24-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 16:38:32-debug: refresh db internal success
+2026-4-18 16:38:32-debug: refresh db assets success
+2026-4-18 16:38:32-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 16:38:32-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 16:38:32-debug: asset-db:worker-effect-data-processing (-1ms)
+2026-4-18 16:38:32-debug: asset-db:refresh-all-database (234ms)
+2026-4-18 16:38:32-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 16:39:01-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:39:01-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.png@6c48abackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:39:01-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.png@f9941background: #aaff85; color: #000;color: #000;
+2026-4-18 16:39:01-error: Importer exec failed: {asset[C:\myProject\cocos\assets\images\btn_green.png@f9941](a1234567-0002-4000-8000-000000000002@f9941)}
+2026-4-18 16:39:01-error: TypeError: Cannot read properties of null (reading 'rawPosition')    at initVerticesData (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\handler\assets\sprite-frame.ccc:1:2230)    at import (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\handler\assets\sprite-frame.ccc:1:5226)    at CustomImporter.import (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\manager\asset-handler-manager.ccc:1:1243)
+2026-4-18 16:39:01-debug: asset-db:reimport-asseta1234567-0002-4000-8000-000000000002 (19ms)
+2026-4-18 16:41:04-debug: refresh db internal success
+2026-4-18 16:41:04-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 16:41:04-debug: refresh db assets success
+2026-4-18 16:41:04-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 16:41:04-debug: asset-db:refresh-all-database (226ms)
+2026-4-18 16:41:04-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 16:41:08-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_green.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:41:08-debug: %cReImport%c: C:\myProject\cocos\assets\images\btn_green.png@6c48abackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:41:08-debug: asset-db:reimport-asseta1234567-0002-4000-8000-000000000002 (11ms)
+2026-4-18 16:42:13-debug: %cImport%c: C:\myProject\cocos\assets\images\default_btn_normal.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:42:13-debug: %cReImport%c: C:\myProject\cocos\assets\images\default_btn_normal.png@6c48abackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:42:13-debug: %cImport%c: C:\myProject\cocos\assets\images\default_btn_normal.png@f9941background: #aaff85; color: #000;color: #000;
+2026-4-18 16:42:13-debug: asset-db:reimport-assetec0e7469-1922-47bc-9d3e-f9742acb6957 (14ms)
+2026-4-18 16:42:13-debug: refresh db internal success
+2026-4-18 16:42:13-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 16:42:13-debug: refresh db assets success
+2026-4-18 16:42:13-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 16:42:13-debug: asset-db:refresh-all-database (226ms)
+2026-4-18 16:42:13-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 16:42:13-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 16:42:27-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_blue.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:42:27-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_blue.png@6c48abackground: #aaff85; color: #000;color: #000;
+2026-4-18 16:42:27-debug: %cImport%c: C:\myProject\cocos\assets\images\btn_blue.png@f9941background: #aaff85; color: #000;color: #000;
+2026-4-18 16:42:27-error: TypeError: Cannot read properties of null (reading 'rawPosition')    at initVerticesData (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\handler\assets\sprite-frame.ccc:1:2230)    at import (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\modules\engine-extensions\extensions\engine-extends\dist\handler\assets\sprite-frame.ccc:1:5226)    at CustomImporter.import (C:\ProgramData\cocos\editors\Creator\3.8.6\resources\app.asar\builtin\asset-db\dist\worker\manager\asset-handler-manager.ccc:1:1243)
+2026-4-18 16:42:27-error: Importer exec failed: {asset[C:\myProject\cocos\assets\images\btn_blue.png@f9941](a1234567-0001-4000-8000-000000000001@f9941)}
+2026-4-18 16:42:27-debug: asset-db:reimport-asseta1234567-0001-4000-8000-000000000001 (14ms)
+2026-4-18 16:44:32-debug: refresh db internal success
+2026-4-18 16:44:32-debug: refresh db assets success
+2026-4-18 16:44:32-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 16:44:32-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 16:44:32-debug: asset-db:refresh-all-database (226ms)
+2026-4-18 16:44:32-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 16:46:41-debug: refresh db internal success
+2026-4-18 16:46:41-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 16:46:41-debug: refresh db assets success
+2026-4-18 16:46:41-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 16:46:41-debug: asset-db:refresh-all-database (227ms)
+2026-4-18 16:46:41-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 16:46:41-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 16:47:40-debug: refresh db internal success
+2026-4-18 16:47:40-debug: refresh db assets success
+2026-4-18 16:47:40-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 16:47:40-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 16:47:40-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 16:47:40-debug: asset-db:refresh-all-database (248ms)
+2026-4-18 16:47:40-debug: asset-db-hook-engine-extends-afterRefresh (2ms)

@@ -1,0 +1,11 @@
+{
+    "systemInfo": {
+        "arch": "x64",
+        "cpu": "Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz",
+        "version": "Windows 11 Pro"
+    },
+    "sceneListMap": {
+        "ec2b5c6d-2d66-412f-806f-4d0f823e4fa3": "C:\\myProject\\cocos\\assets\\scene.scene"
+    },
+    "deviceMd5": "dd792a50f97f7731849f0cba86f8fdbc"
+}

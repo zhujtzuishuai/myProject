@@ -1,0 +1,52 @@
+{
+  "name": "md-to-wiki",
+  "publisher": "local",
+  "displayName": "MD to Wiki",
+  "description": "将 Markdown 文件转换为 Atlassian Wiki Markup (.wiki)",
+  "version": "1.1.0",
+  "engines": { "vscode": "^1.75.0" },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "md-to-wiki.convert",
+        "title": "Convert to Atlassian Wiki Markup"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "md-to-wiki.convert",
+          "when": "editorLangId == markdown"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "md-to-wiki.convert",
+          "when": "resourceExtname == .md",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "md-to-wiki.convert",
+          "when": "resourceExtname == .md",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0",
+    "@vscode/vsce": "^2.0.0"
+  }
+}

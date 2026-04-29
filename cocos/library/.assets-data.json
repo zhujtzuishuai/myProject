@@ -1,0 +1,271 @@
+{
+  "4fd57163-0b52-45b2-98aa-cc396bd08ab2": {
+    "url": "db://assets/scripts/AutoFitContainerTest.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "3eedd4c5-d912-47d6-a131-418efe18c7b8": {
+    "url": "db://assets/scripts/components/AutoFitContainer.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "32030aeb-b5e1-40b7-aac8-e3c2b99c46b3": {
+    "url": "db://assets/scripts",
+    "value": {},
+    "versionCode": 1
+  },
+  "57e589de-ed95-40e1-8592-1177aeda9213": {
+    "url": "db://assets/scripts/components",
+    "value": {},
+    "versionCode": 1
+  },
+  "ec2b5c6d-2d66-412f-806f-4d0f823e4fa3": {
+    "url": "db://assets/scene.scene",
+    "value": {
+      "depends": [
+        "ec2b5c6d-2d66-412f-806f-4d0f823e4fa3",
+        "39619214-f7f9-4c6b-b41c-914410a882d5",
+        "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
+        "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0"
+      ],
+      "dependScripts": [
+        "4fd57163-0b52-45b2-98aa-cc396bd08ab2",
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d3dbe930-ed38-44f6-879b-c4099becc9a9": {
+    "url": "db://assets/ui",
+    "value": {},
+    "versionCode": 1
+  },
+  "43a2708e-3c06-48b1-9814-a2ecb0f0553e": {
+    "url": "db://assets/ui/test1.prefab",
+    "value": {
+      "depends": [
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941"
+      ],
+      "dependScripts": [
+        "3eedd4c5-d912-47d6-a131-418efe18c7b8"
+      ]
+    },
+    "versionCode": 1
+  },
+  "abdca5d0-17a9-4133-ad59-d7bbcb924b3c": {
+    "url": "db://assets/scripts/components/AutoFitContainerV2.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "26d05330-6fba-4618-ab77-8b1c2878cd43": {
+    "url": "db://assets/images",
+    "value": {},
+    "versionCode": 1
+  },
+  "ec0e7469-1922-47bc-9d3e-f9742acb6957": {
+    "url": "db://assets/images/default_btn_normal.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "ec0e7469-1922-47bc-9d3e-f9742acb6957@6c48a": {
+    "url": "db://assets/images/default_btn_normal.png@6c48a",
+    "value": {
+      "depends": [
+        "ec0e7469-1922-47bc-9d3e-f9742acb6957"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9ba79ad9-e86a-42ad-a3a8-926d46d8c831": {
+    "url": "db://assets/ui/prefab1.prefab",
+    "value": {
+      "depends": [
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "bb60dfe8-d0e1-434b-a836-e33c62d49447": {
+    "url": "db://assets/ui/prefab2.prefab",
+    "value": {
+      "depends": [
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "96460713-2d48-46d3-8825-a61302b109f5": {
+    "url": "db://assets/images/red.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "96460713-2d48-46d3-8825-a61302b109f5@6c48a": {
+    "url": "db://assets/images/red.png@6c48a",
+    "value": {
+      "depends": [
+        "96460713-2d48-46d3-8825-a61302b109f5"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a1234567-0001-4000-8000-000000000001": {
+    "url": "db://assets/images/btn_blue.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "a1234567-0002-4000-8000-000000000002": {
+    "url": "db://assets/images/btn_green.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "a1234567-0005-4000-8000-000000000005": {
+    "url": "db://assets/images/frame_border.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "a1234567-0004-4000-8000-000000000004": {
+    "url": "db://assets/images/icon_diamond.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "a1234567-0003-4000-8000-000000000003": {
+    "url": "db://assets/images/icon_star.png",
+    "value": {},
+    "versionCode": 1
+  },
+  "b1234567-0002-4000-8000-000000000002": {
+    "url": "db://assets/ui/btn_cancel.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "b1234567-0001-4000-8000-000000000001": {
+    "url": "db://assets/ui/btn_confirm.prefab",
+    "value": {
+      "depends": [
+        "a1234567-0001-4000-8000-000000000001@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "b1234567-0003-4000-8000-000000000003": {
+    "url": "db://assets/ui/btn_start.prefab",
+    "value": {
+      "depends": [
+        "a1234567-0002-4000-8000-000000000002@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "b1234567-0005-4000-8000-000000000005": {
+    "url": "db://assets/ui/item_diamond.prefab",
+    "value": {
+      "depends": [
+        "a1234567-0004-4000-8000-000000000004@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "b1234567-0004-4000-8000-000000000004": {
+    "url": "db://assets/ui/item_star.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  },
+  "b1234567-0006-4000-8000-000000000006": {
+    "url": "db://assets/ui/reward_panel.prefab",
+    "value": {
+      "depends": [
+        "a1234567-0005-4000-8000-000000000005@f9941",
+        "a1234567-0003-4000-8000-000000000003@f9941"
+      ],
+      "dependScripts": [
+        "21c72b97-5f9d-4bcd-bf57-7b57ef58d703"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a1234567-0002-4000-8000-000000000002@6c48a": {
+    "url": "db://assets/images/btn_green.png@6c48a",
+    "value": {
+      "depends": [
+        "a1234567-0002-4000-8000-000000000002"
+      ]
+    },
+    "versionCode": 1
+  },
+  "ec0e7469-1922-47bc-9d3e-f9742acb6957@f9941": {
+    "url": "db://assets/images/default_btn_normal.png@f9941",
+    "value": {
+      "depends": [
+        "ec0e7469-1922-47bc-9d3e-f9742acb6957@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a1234567-0001-4000-8000-000000000001@6c48a": {
+    "url": "db://assets/images/btn_blue.png@6c48a",
+    "value": {
+      "depends": [
+        "a1234567-0001-4000-8000-000000000001"
+      ]
+    },
+    "versionCode": 1
+  },
+  "21c72b97-5f9d-4bcd-bf57-7b57ef58d703": {
+    "url": "db://assets/scripts/components/Marquee.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "a1234567-0005-4000-8000-000000000005@6c48a": {
+    "url": "db://assets/images/frame_border.png@6c48a",
+    "value": {
+      "depends": [
+        "a1234567-0005-4000-8000-000000000005"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a1234567-0004-4000-8000-000000000004@6c48a": {
+    "url": "db://assets/images/icon_diamond.png@6c48a",
+    "value": {
+      "depends": [
+        "a1234567-0004-4000-8000-000000000004"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a1234567-0003-4000-8000-000000000003@6c48a": {
+    "url": "db://assets/images/icon_star.png@6c48a",
+    "value": {
+      "depends": [
+        "a1234567-0003-4000-8000-000000000003"
+      ]
+    },
+    "versionCode": 1
+  },
+  "39619214-f7f9-4c6b-b41c-914410a882d5": {
+    "url": "db://assets/ui/marquee_demo.prefab",
+    "value": {
+      "depends": [],
+      "dependScripts": [
+        "21c72b97-5f9d-4bcd-bf57-7b57ef58d703"
+      ]
+    },
+    "versionCode": 1
+  },
+  "28457775-53ca-4070-a78f-254033c41f59": {
+    "url": "db://assets/scripts/CombatManager.ts",
+    "value": {},
+    "versionCode": 1
+  }
+}

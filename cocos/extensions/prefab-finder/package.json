@@ -1,0 +1,38 @@
+{
+    "package_version": 2,
+    "version": "1.0.5",
+    "name": "prefab-finder",
+    "description": "按图片相似度搜索预制体（pHash）",
+    "author": "",
+    "main": "main.js",
+    "panels": {
+        "default": {
+            "title": "预制体搜索器",
+            "type": "dockable",
+            "main": "panels/default.js",
+            "size": {
+                "min-width": 400,
+                "min-height": 500,
+                "width": 480,
+                "height": 680
+            }
+        }
+    },
+    "contributions": {
+        "messages": {
+            "open-panel": {
+                "title": { "default": "打开预制体搜索器" },
+                "public": false,
+                "description": "打开预制体搜索器面板",
+                "methods": ["openPanel"]
+            }
+        },
+        "menu": [
+            {
+                "path": "i18n:menu.extension/预制体搜索器",
+                "label": "打开面板",
+                "message": "open-panel"
+            }
+        ]
+    }
+}

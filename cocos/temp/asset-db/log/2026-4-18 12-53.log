@@ -1,0 +1,439 @@
+2026-4-18 12:53:47-debug: start **** info
+2026-4-18 12:53:47-log: Cannot access game frame or container.
+2026-4-18 12:53:48-debug: asset-db:require-engine-code (755ms)
+2026-4-18 12:53:48-log: [box2d]:box2d wasm lib loaded.
+2026-4-18 12:53:48-log: meshopt wasm decoder initialized
+2026-4-18 12:53:48-log: [bullet]:bullet wasm lib loaded.
+2026-4-18 12:53:48-log: Using legacy pipeline
+2026-4-18 12:53:48-log: Forward render pipeline initialized.
+2026-4-18 12:53:48-log: Cocos Creator v3.8.6
+2026-4-18 12:53:48-debug: [Assets Memory track]: asset-db:worker-init: initEngine start:31.15MB, end 79.90MB, increase: 48.75MB
+2026-4-18 12:53:50-debug: [Assets Memory track]: asset-db-plugin-register: builder start:84.27MB, end 224.62MB, increase: 140.34MB
+2026-4-18 12:53:50-debug: [Assets Memory track]: asset-db-plugin-register: engine-extends start:224.87MB, end 228.03MB, increase: 3.16MB
+2026-4-18 12:53:48-debug: [Assets Memory track]: asset-db-plugin-register: programming start:80.99MB, end 84.23MB, increase: 3.24MB
+2026-4-18 12:53:50-debug: [Assets Memory track]: asset-db-plugin-register: project start:80.85MB, end 228.23MB, increase: 147.38MB
+2026-4-18 12:53:50-debug: [Assets Memory track]: asset-db:worker-init: initPlugin start:79.92MB, end 228.26MB, increase: 148.34MB
+2026-4-18 12:53:50-debug: run package(xiaomi-quick-game) handler(enable) start
+2026-4-18 12:53:50-debug: run package(xiaomi-quick-game) handler(enable) success!
+2026-4-18 12:53:50-debug: run package(cocos-service) handler(enable) start
+2026-4-18 12:53:50-debug: run package(cocos-service) handler(enable) success!
+2026-4-18 12:53:50-debug: run package(im-plugin) handler(enable) start
+2026-4-18 12:53:50-debug: run package(im-plugin) handler(enable) success!
+2026-4-18 12:53:50-debug: run package(fix-asset-default-userdata) handler(enable) start
+2026-4-18 12:53:50-debug: run package(fix-asset-default-userdata) handler(enable) success!
+2026-4-18 12:53:50-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 12:53:50-debug: run package(placeholder) handler(enable) start
+2026-4-18 12:53:50-debug: run package(placeholder) handler(enable) success!
+2026-4-18 12:53:50-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 12:53:50-debug: asset-db:worker-init: initPlugin (1761ms)
+2026-4-18 12:53:50-debug: Run asset db hook programming:beforePreStart success!
+2026-4-18 12:53:50-debug: Run asset db hook programming:beforePreStart ...
+2026-4-18 12:53:50-debug: Run asset db hook engine-extends:beforePreStart ...
+2026-4-18 12:53:50-debug: [Assets Memory track]: asset-db:worker-init start:31.14MB, end 224.70MB, increase: 193.56MB
+2026-4-18 12:53:50-debug: Run asset db hook engine-extends:beforePreStart success!
+2026-4-18 12:53:50-debug: asset-db:worker-init (2949ms)
+2026-4-18 12:53:50-debug: asset-db-hook-programming-beforePreStart (329ms)
+2026-4-18 12:53:50-debug: asset-db-hook-engine-extends-beforePreStart (328ms)
+2026-4-18 12:53:50-debug: Preimport db internal success
+2026-4-18 12:53:50-debug: Preimport db assets success
+2026-4-18 12:53:50-debug: Run asset db hook programming:afterPreStart ...
+2026-4-18 12:53:50-debug: starting packer-driver...
+2026-4-18 12:53:51-debug: initialize scripting environment...
+2026-4-18 12:53:51-debug: [[Executor]] prepare before lock
+2026-4-18 12:53:51-debug: Set detail map pack:///resolution-detail-map.json: {}
+2026-4-18 12:53:51-debug: Run asset db hook programming:afterPreStart success!
+2026-4-18 12:53:51-debug: Run asset db hook engine-extends:afterPreStart success!
+2026-4-18 12:53:51-debug: [[Executor]] prepare after unlock
+2026-4-18 12:53:51-debug: [Assets Memory track]: asset-db:worker-init: preStart start:224.71MB, end 230.94MB, increase: 6.22MB
+2026-4-18 12:53:51-debug: Run asset db hook engine-extends:afterPreStart ...
+2026-4-18 12:53:51-debug: Start up the 'internal' database...
+2026-4-18 12:53:51-debug: asset-db-hook-programming-afterPreStart (873ms)
+2026-4-18 12:53:51-debug: asset-db:worker-effect-data-processing (443ms)
+2026-4-18 12:53:51-debug: asset-db-hook-engine-extends-afterPreStart (443ms)
+2026-4-18 12:53:51-debug: [Assets Memory track]: asset-db:worker-startup-database[internal] start:224.81MB, end 244.35MB, increase: 19.54MB
+2026-4-18 12:53:51-debug: Start up the 'assets' database...
+2026-4-18 12:53:51-debug: asset-db:worker-startup-database[internal] (1455ms)
+2026-4-18 12:53:51-debug: lazy register asset handler *
+2026-4-18 12:53:51-debug: lazy register asset handler directory
+2026-4-18 12:53:51-debug: [Assets Memory track]: asset-db:worker-startup-database[assets] start:230.14MB, end 244.43MB, increase: 14.29MB
+2026-4-18 12:53:51-debug: [Assets Memory track]: asset-db:worker-init: startup start:230.95MB, end 244.45MB, increase: 13.50MB
+2026-4-18 12:53:51-debug: lazy register asset handler text
+2026-4-18 12:53:51-debug: lazy register asset handler json
+2026-4-18 12:53:51-debug: lazy register asset handler spine-data
+2026-4-18 12:53:51-debug: lazy register asset handler dragonbones
+2026-4-18 12:53:51-debug: lazy register asset handler dragonbones-atlas
+2026-4-18 12:53:51-debug: lazy register asset handler javascript
+2026-4-18 12:53:51-debug: lazy register asset handler terrain
+2026-4-18 12:53:51-debug: lazy register asset handler typescript
+2026-4-18 12:53:51-debug: lazy register asset handler prefab
+2026-4-18 12:53:51-debug: lazy register asset handler scene
+2026-4-18 12:53:51-debug: lazy register asset handler tiled-map
+2026-4-18 12:53:51-debug: lazy register asset handler buffer
+2026-4-18 12:53:51-debug: lazy register asset handler image
+2026-4-18 12:53:51-debug: lazy register asset handler sprite-frame
+2026-4-18 12:53:51-debug: lazy register asset handler texture
+2026-4-18 12:53:51-debug: lazy register asset handler sign-image
+2026-4-18 12:53:51-debug: lazy register asset handler alpha-image
+2026-4-18 12:53:51-debug: lazy register asset handler texture-cube
+2026-4-18 12:53:51-debug: lazy register asset handler erp-texture-cube
+2026-4-18 12:53:51-debug: lazy register asset handler texture-cube-face
+2026-4-18 12:53:51-debug: lazy register asset handler render-texture
+2026-4-18 12:53:51-debug: lazy register asset handler rt-sprite-frame
+2026-4-18 12:53:51-debug: lazy register asset handler gltf-mesh
+2026-4-18 12:53:51-debug: lazy register asset handler gltf
+2026-4-18 12:53:51-debug: lazy register asset handler gltf-animation
+2026-4-18 12:53:51-debug: lazy register asset handler gltf-skeleton
+2026-4-18 12:53:51-debug: lazy register asset handler gltf-material
+2026-4-18 12:53:51-debug: lazy register asset handler gltf-scene
+2026-4-18 12:53:51-debug: lazy register asset handler gltf-embeded-image
+2026-4-18 12:53:51-debug: lazy register asset handler fbx
+2026-4-18 12:53:51-debug: lazy register asset handler material
+2026-4-18 12:53:51-debug: lazy register asset handler physics-material
+2026-4-18 12:53:51-debug: lazy register asset handler effect-header
+2026-4-18 12:53:51-debug: lazy register asset handler effect
+2026-4-18 12:53:51-debug: lazy register asset handler audio-clip
+2026-4-18 12:53:51-debug: lazy register asset handler animation-clip
+2026-4-18 12:53:51-debug: lazy register asset handler animation-graph
+2026-4-18 12:53:51-debug: lazy register asset handler animation-mask
+2026-4-18 12:53:51-debug: lazy register asset handler animation-graph-variant
+2026-4-18 12:53:51-debug: lazy register asset handler ttf-font
+2026-4-18 12:53:51-debug: lazy register asset handler bitmap-font
+2026-4-18 12:53:51-debug: lazy register asset handler particle
+2026-4-18 12:53:51-debug: lazy register asset handler sprite-atlas
+2026-4-18 12:53:51-debug: lazy register asset handler auto-atlas
+2026-4-18 12:53:51-debug: lazy register asset handler label-atlas
+2026-4-18 12:53:51-debug: lazy register asset handler render-pipeline
+2026-4-18 12:53:51-debug: lazy register asset handler render-flow
+2026-4-18 12:53:51-debug: lazy register asset handler instantiation-material
+2026-4-18 12:53:51-debug: lazy register asset handler instantiation-skeleton
+2026-4-18 12:53:51-debug: lazy register asset handler render-stage
+2026-4-18 12:53:51-debug: lazy register asset handler instantiation-animation
+2026-4-18 12:53:51-debug: lazy register asset handler instantiation-mesh
+2026-4-18 12:53:51-debug: lazy register asset handler video-clip
+2026-4-18 12:53:51-debug: asset-db:worker-startup-database[assets] (1052ms)
+2026-4-18 12:53:51-debug: asset-db:start-database (1512ms)
+2026-4-18 12:53:51-debug: fix the bug of updateDefaultUserData
+2026-4-18 12:53:51-debug: asset-db:ready (7116ms)
+2026-4-18 12:53:51-debug: init worker message success
+2026-4-18 12:53:51-debug: programming:execute-script (5ms)
+2026-4-18 12:53:52-debug: [Build Memory track]: builder:worker-init start:242.79MB, end 256.18MB, increase: 13.39MB
+2026-4-18 12:53:52-debug: builder:worker-init (480ms)
+2026-4-18 12:55:39-debug: refresh db internal success
+2026-4-18 12:55:39-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:55:39-debug: refresh db assets success
+2026-4-18 12:55:39-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:55:39-debug: asset-db:refresh-all-database (228ms)
+2026-4-18 12:55:39-debug: asset-db:worker-effect-data-processing (3ms)
+2026-4-18 12:55:39-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+2026-4-18 12:56:15-debug: refresh db internal success
+2026-4-18 12:56:15-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:56:15-debug: refresh db assets success
+2026-4-18 12:56:15-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:56:15-debug: asset-db:refresh-all-database (218ms)
+2026-4-18 12:56:28-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 12:56:28-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 12:56:29-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 12:56:29-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 12:56:37-debug: refresh db internal success
+2026-4-18 12:56:37-debug: refresh db assets success
+2026-4-18 12:56:37-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:56:37-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:56:37-debug: asset-db:refresh-all-database (218ms)
+2026-4-18 12:56:37-debug: asset-db:worker-effect-data-processing (3ms)
+2026-4-18 12:56:37-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+2026-4-18 12:56:38-debug: refresh db internal success
+2026-4-18 12:56:38-debug: refresh db assets success
+2026-4-18 12:56:38-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:56:38-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:56:38-debug: asset-db:refresh-all-database (219ms)
+2026-4-18 12:56:38-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 12:56:38-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 12:56:51-debug: refresh db internal success
+2026-4-18 12:56:51-debug: refresh db assets success
+2026-4-18 12:56:51-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:56:51-debug: asset-db:refresh-all-database (218ms)
+2026-4-18 12:56:51-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:56:51-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 12:56:51-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 12:58:31-debug: refresh db internal success
+2026-4-18 12:58:31-debug: refresh db assets success
+2026-4-18 12:58:31-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:58:31-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:58:31-debug: asset-db:refresh-all-database (218ms)
+2026-4-18 12:58:31-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 12:58:31-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 12:58:37-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 12:58:37-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 12:58:37-debug: run package(prefab-finder) handler(register) start
+2026-4-18 12:58:37-debug: run package(prefab-finder) handler(register) success!
+2026-4-18 12:58:37-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 12:58:37-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 12:59:14-debug: refresh db internal success
+2026-4-18 12:59:14-debug: refresh db assets success
+2026-4-18 12:59:14-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:59:14-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:59:14-debug: asset-db:refresh-all-database (219ms)
+2026-4-18 12:59:14-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 12:59:14-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 12:59:18-debug: refresh db internal success
+2026-4-18 12:59:18-debug: refresh db assets success
+2026-4-18 12:59:18-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:59:18-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:59:18-debug: asset-db:refresh-all-database (214ms)
+2026-4-18 12:59:18-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 12:59:18-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 12:59:20-debug: refresh db internal success
+2026-4-18 12:59:20-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:59:20-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:59:20-debug: refresh db assets success
+2026-4-18 12:59:20-debug: asset-db:refresh-all-database (214ms)
+2026-4-18 12:59:20-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 12:59:20-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 12:59:37-debug: refresh db internal success
+2026-4-18 12:59:37-debug: %cImport%c: C:\myProject\cocos\assets\imagesbackground: #aaff85; color: #000;color: #000;
+2026-4-18 12:59:37-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:59:37-debug: refresh db assets success
+2026-4-18 12:59:37-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:59:37-debug: asset-db:refresh-all-database (222ms)
+2026-4-18 12:59:37-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 12:59:37-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 12:59:59-debug: refresh db internal success
+2026-4-18 12:59:59-debug: %cImport%c: C:\myProject\cocos\assets\images\default_btn_normal.pngbackground: #aaff85; color: #000;color: #000;
+2026-4-18 12:59:59-debug: %cImport%c: C:\myProject\cocos\assets\imagesbackground: #aaff85; color: #000;color: #000;
+2026-4-18 12:59:59-debug: %cImport%c: C:\myProject\cocos\assets\images\default_btn_normal.png@6c48abackground: #aaff85; color: #000;color: #000;
+2026-4-18 12:59:59-debug: refresh db assets success
+2026-4-18 12:59:59-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 12:59:59-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 12:59:59-debug: asset-db:refresh-all-database (239ms)
+2026-4-18 12:59:59-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 12:59:59-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:00:05-debug: refresh db internal success
+2026-4-18 13:00:05-debug: refresh db assets success
+2026-4-18 13:00:05-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:00:05-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:00:05-debug: asset-db:refresh-all-database (222ms)
+2026-4-18 13:00:05-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:00:05-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 13:00:10-debug: refresh db internal success
+2026-4-18 13:00:10-debug: refresh db assets success
+2026-4-18 13:00:10-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:00:10-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:00:10-debug: asset-db:refresh-all-database (225ms)
+2026-4-18 13:00:10-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:00:10-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 13:02:32-debug: start refresh asset from C:\myProject\cocos\assets\ui\prefab1.prefab...
+2026-4-18 13:02:32-debug: %cImport%c: C:\myProject\cocos\assets\ui\prefab1.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:02:32-debug: refresh asset C:\myProject\cocos\assets\ui success
+2026-4-18 13:02:32-debug: %cImport%c: C:\myProject\cocos\assets\uibackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:02:35-debug: %cImport%c: C:\myProject\cocos\assets\ui\test1.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:02:35-debug: asset-db:reimport-asset43a2708e-3c06-48b1-9814-a2ecb0f0553e (5ms)
+2026-4-18 13:02:35-debug: refresh db internal success
+2026-4-18 13:02:35-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:02:35-debug: refresh db assets success
+2026-4-18 13:02:35-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:02:35-debug: asset-db:refresh-all-database (243ms)
+2026-4-18 13:02:35-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:02:35-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:02:45-debug: refresh db internal success
+2026-4-18 13:02:45-debug: refresh db assets success
+2026-4-18 13:02:45-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:02:45-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:02:45-debug: asset-db:refresh-all-database (217ms)
+2026-4-18 13:02:45-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:02:45-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:02:47-debug: refresh db internal success
+2026-4-18 13:02:47-debug: refresh db assets success
+2026-4-18 13:02:47-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:02:47-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:02:47-debug: asset-db:refresh-all-database (229ms)
+2026-4-18 13:02:47-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:02:47-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 13:03:06-debug: %cImport%c: C:\myProject\cocos\assets\ui\prefab1.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:03:06-debug: asset-db:reimport-asset9ba79ad9-e86a-42ad-a3a8-926d46d8c831 (5ms)
+2026-4-18 13:03:10-debug: refresh db internal success
+2026-4-18 13:03:10-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:03:10-debug: refresh db assets success
+2026-4-18 13:03:10-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:03:10-debug: asset-db:refresh-all-database (219ms)
+2026-4-18 13:03:10-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:03:10-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+2026-4-18 13:08:28-debug: refresh db internal success
+2026-4-18 13:08:28-debug: refresh db assets success
+2026-4-18 13:08:28-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:08:28-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:08:28-debug: asset-db:refresh-all-database (225ms)
+2026-4-18 13:08:28-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:08:28-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 13:08:35-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 13:08:35-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 13:08:36-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 13:08:36-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 13:08:49-debug: refresh db internal success
+2026-4-18 13:08:49-debug: refresh db assets success
+2026-4-18 13:08:49-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:08:49-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:08:49-debug: asset-db:refresh-all-database (222ms)
+2026-4-18 13:08:49-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:08:49-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:12:46-debug: refresh db internal success
+2026-4-18 13:12:46-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:12:46-debug: refresh db assets success
+2026-4-18 13:12:46-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:12:46-debug: asset-db:refresh-all-database (220ms)
+2026-4-18 13:12:46-debug: asset-db:worker-effect-data-processing (3ms)
+2026-4-18 13:12:46-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+2026-4-18 13:12:54-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 13:12:54-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 13:12:55-debug: run package(prefab-finder) handler(register) start
+2026-4-18 13:12:55-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 13:12:55-debug: run package(prefab-finder) handler(register) success!
+2026-4-18 13:12:55-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 13:13:19-debug: refresh db internal success
+2026-4-18 13:13:19-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:13:19-debug: refresh db assets success
+2026-4-18 13:13:19-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:13:19-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:13:19-debug: asset-db:refresh-all-database (219ms)
+2026-4-18 13:13:19-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:13:33-debug: refresh db internal success
+2026-4-18 13:13:33-debug: refresh db assets success
+2026-4-18 13:13:33-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:13:33-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:13:33-debug: asset-db:refresh-all-database (219ms)
+2026-4-18 13:13:33-debug: asset-db:worker-effect-data-processing (3ms)
+2026-4-18 13:13:33-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+2026-4-18 13:13:47-debug: refresh db internal success
+2026-4-18 13:13:47-debug: refresh db assets success
+2026-4-18 13:13:47-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:13:47-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:13:47-debug: asset-db:refresh-all-database (218ms)
+2026-4-18 13:13:47-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:13:47-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:22:36-debug: start refresh asset from C:\myProject\cocos\assets\ui\prefab2.prefab...
+2026-4-18 13:22:36-debug: %cImport%c: C:\myProject\cocos\assets\ui\prefab2.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:22:36-debug: refresh asset C:\myProject\cocos\assets\ui success
+2026-4-18 13:22:36-debug: %cImport%c: C:\myProject\cocos\assets\uibackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:22:40-debug: refresh db internal success
+2026-4-18 13:22:40-debug: refresh db assets success
+2026-4-18 13:22:40-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:22:40-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:22:40-debug: asset-db:refresh-all-database (222ms)
+2026-4-18 13:22:40-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:22:40-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:22:42-debug: refresh db internal success
+2026-4-18 13:22:42-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:22:42-debug: refresh db assets success
+2026-4-18 13:22:42-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:22:42-debug: asset-db:refresh-all-database (239ms)
+2026-4-18 13:22:42-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:22:42-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:22:42-debug: %cImport%c: C:\myProject\cocos\assets\ui\prefab2.prefabbackground: #aaff85; color: #000;color: #000;
+2026-4-18 13:22:42-debug: asset-db:reimport-assetbb60dfe8-d0e1-434b-a836-e33c62d49447 (5ms)
+2026-4-18 13:22:48-debug: refresh db internal success
+2026-4-18 13:22:48-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:22:48-debug: refresh db assets success
+2026-4-18 13:22:48-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:22:48-debug: asset-db:refresh-all-database (217ms)
+2026-4-18 13:22:48-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:22:48-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:23:10-debug: refresh db internal success
+2026-4-18 13:23:10-debug: refresh db assets success
+2026-4-18 13:23:10-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:23:10-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:23:10-debug: asset-db:refresh-all-database (218ms)
+2026-4-18 13:23:10-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:23:10-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:23:25-debug: refresh db internal success
+2026-4-18 13:23:25-debug: refresh db assets success
+2026-4-18 13:23:25-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:23:25-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:23:25-debug: asset-db:refresh-all-database (218ms)
+2026-4-18 13:23:25-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:23:25-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+2026-4-18 13:23:29-debug: refresh db internal success
+2026-4-18 13:23:29-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:23:29-debug: refresh db assets success
+2026-4-18 13:23:29-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:23:29-debug: asset-db:refresh-all-database (218ms)
+2026-4-18 13:23:29-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:23:29-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 13:27:17-debug: refresh db internal success
+2026-4-18 13:27:17-debug: refresh db assets success
+2026-4-18 13:27:17-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:27:17-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:27:17-debug: asset-db:refresh-all-database (217ms)
+2026-4-18 13:27:17-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:27:17-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 13:27:28-debug: refresh db internal success
+2026-4-18 13:27:28-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:27:28-debug: refresh db assets success
+2026-4-18 13:27:28-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:27:28-debug: asset-db:refresh-all-database (215ms)
+2026-4-18 13:27:28-debug: asset-db:worker-effect-data-processing (1ms)
+2026-4-18 13:27:28-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+2026-4-18 13:27:29-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 13:27:29-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 13:27:29-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 13:27:29-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 13:27:38-debug: refresh db internal success
+2026-4-18 13:27:38-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:27:38-debug: refresh db assets success
+2026-4-18 13:27:38-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:27:38-debug: asset-db:refresh-all-database (218ms)
+2026-4-18 13:27:38-debug: asset-db:worker-effect-data-processing (3ms)
+2026-4-18 13:27:38-debug: asset-db-hook-engine-extends-afterRefresh (4ms)
+2026-4-18 13:27:39-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 13:27:39-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 13:27:40-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 13:27:40-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 13:28:10-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 13:28:10-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 13:28:12-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 13:28:12-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 13:28:26-debug: refresh db internal success
+2026-4-18 13:28:26-debug: refresh db assets success
+2026-4-18 13:28:26-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:28:26-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:28:26-debug: asset-db:refresh-all-database (224ms)
+2026-4-18 13:28:26-debug: asset-db:worker-effect-data-processing (-1ms)
+2026-4-18 13:28:26-debug: asset-db-hook-engine-extends-afterRefresh (-1ms)
+2026-4-18 13:29:02-debug: refresh db internal success
+2026-4-18 13:29:02-debug: refresh db assets success
+2026-4-18 13:29:02-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:29:02-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:29:02-debug: asset-db:worker-effect-data-processing (3ms)
+2026-4-18 13:29:02-debug: asset-db:refresh-all-database (218ms)
+2026-4-18 13:29:02-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+2026-4-18 13:29:06-debug: refresh db internal success
+2026-4-18 13:29:06-debug: refresh db assets success
+2026-4-18 13:29:06-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:29:06-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:29:06-debug: asset-db:refresh-all-database (222ms)
+2026-4-18 13:29:06-debug: asset-db:worker-effect-data-processing (2ms)
+2026-4-18 13:29:06-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
+2026-4-18 13:29:21-debug: refresh db internal success
+2026-4-18 13:29:21-debug: refresh db assets success
+2026-4-18 13:29:21-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:29:21-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:29:21-debug: asset-db:refresh-all-database (216ms)
+2026-4-18 13:29:21-debug: asset-db:worker-effect-data-processing (-1ms)
+2026-4-18 13:29:21-debug: asset-db-hook-engine-extends-afterRefresh (-1ms)
+2026-4-18 13:29:23-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 13:29:23-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 13:29:26-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 13:29:26-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 13:29:48-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 13:29:48-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 13:29:48-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 13:29:48-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 13:29:51-debug: run package(prefab-finder) handler(disable) start
+2026-4-18 13:29:51-debug: run package(prefab-finder) handler(disable) success!
+2026-4-18 13:29:55-debug: run package(prefab-finder) handler(enable) start
+2026-4-18 13:29:55-debug: run package(prefab-finder) handler(enable) success!
+2026-4-18 13:29:55-debug: refresh db internal success
+2026-4-18 13:29:55-debug: Run asset db hook engine-extends:afterRefresh ...
+2026-4-18 13:29:55-debug: refresh db assets success
+2026-4-18 13:29:55-debug: Run asset db hook engine-extends:afterRefresh success!
+2026-4-18 13:29:55-debug: asset-db:refresh-all-database (234ms)
+2026-4-18 13:29:55-debug: asset-db:worker-effect-data-processing (4ms)
+2026-4-18 13:29:55-debug: asset-db-hook-engine-extends-afterRefresh (4ms)

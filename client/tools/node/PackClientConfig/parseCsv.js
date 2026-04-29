@@ -284,6 +284,7 @@ class CsvMgr {
         for (; i < lines.length; i++) {
             const firstCell = lines[i][0];
             if (firstCell.match(/^\$#/)) {
+                if (dep === 0) continue;
                 break;
             } else if (firstCell.match(/^\$.+/)) {
                 const [_, prefix, key] = firstCell.match(/^(\$+)(.+)/) || [];
@@ -297,8 +298,9 @@ class CsvMgr {
                 // 记录当前行号，供类型错误报告使用
                 this._currentRow = i + 1;
                 const info = {};
-                for (let j = 0; j < lines[i].length; j++) {
-                    let value = lines[i][j];
+                const totalCols = this.varNames.length;
+                for (let j = 0; j < totalCols; j++) {
+                    let value = j < lines[i].length ? lines[i][j] : "";
                     if (value.length === 0) {
                         // 该列出现空值，标记为可选列（仅顶层数据行）
                         if (dep === 0 && this.varNames[j] && this.varNames[j].length > 0) {

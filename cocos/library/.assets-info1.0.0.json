@@ -1,0 +1,182 @@
+{
+  "version": "1.0.0",
+  "map": {
+    "C:\\myProject\\cocos\\assets\\scripts": {
+      "time": 1777427012765.1274,
+      "uuid": "32030aeb-b5e1-40b7-aac8-e3c2b99c46b3"
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\components": {
+      "time": 1777425262082.9626,
+      "uuid": "57e589de-ed95-40e1-8592-1177aeda9213"
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\AutoFitContainerTest.ts": {
+      "time": 1776351621381.125,
+      "uuid": "4fd57163-0b52-45b2-98aa-cc396bd08ab2"
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\components\\AutoFitContainer.ts": {
+      "time": 1776395791893.722,
+      "uuid": "3eedd4c5-d912-47d6-a131-418efe18c7b8"
+    },
+    "C:\\myProject\\cocos\\assets\\scripts.meta": {
+      "time": 1776360979381.5764
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\components.meta": {
+      "time": 1776360979381.5764
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\AutoFitContainerTest.ts.meta": {
+      "time": 1776360979386.0776
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\components\\AutoFitContainer.ts.meta": {
+      "time": 1776360979387.082
+    },
+    "C:\\myProject\\cocos\\assets\\scene.scene.meta": {
+      "time": 1776361094961.5974
+    },
+    "C:\\myProject\\cocos\\assets\\scene.scene": {
+      "time": 1777427533494.382,
+      "uuid": "ec2b5c6d-2d66-412f-806f-4d0f823e4fa3"
+    },
+    "C:\\myProject\\cocos\\assets\\ui.meta": {
+      "time": 1776361348315.92
+    },
+    "C:\\myProject\\cocos\\assets\\ui": {
+      "time": 1776946752291.042,
+      "uuid": "d3dbe930-ed38-44f6-879b-c4099becc9a9"
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\test1.prefab.meta": {
+      "time": 1776361357489.3567
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\test1.prefab": {
+      "time": 1776488555422.5127,
+      "uuid": "43a2708e-3c06-48b1-9814-a2ecb0f0553e"
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\components\\AutoFitContainerV2.ts.meta": {
+      "time": 1776395402615.3164
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\components\\AutoFitContainerV2.ts": {
+      "time": 1776395277222.5125,
+      "uuid": "abdca5d0-17a9-4133-ad59-d7bbcb924b3c"
+    },
+    "C:\\myProject\\cocos\\assets\\images.meta": {
+      "time": 1776488377723.9624
+    },
+    "C:\\myProject\\cocos\\assets\\images": {
+      "time": 1776944525549.1467,
+      "uuid": "26d05330-6fba-4618-ab77-8b1c2878cd43"
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\prefab1.prefab.meta": {
+      "time": 1776488552203.8794
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\prefab1.prefab": {
+      "time": 1776488586481.7888,
+      "uuid": "9ba79ad9-e86a-42ad-a3a8-926d46d8c831"
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\prefab2.prefab.meta": {
+      "time": 1776489756890.9949
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\prefab2.prefab": {
+      "time": 1776489762826.4546,
+      "uuid": "bb60dfe8-d0e1-434b-a836-e33c62d49447"
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\btn_cancel.prefab.meta": {
+      "time": 1776491577931.4707
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\btn_confirm.prefab.meta": {
+      "time": 1776491577930.4707
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\btn_start.prefab.meta": {
+      "time": 1776491577933.4695
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\item_diamond.prefab.meta": {
+      "time": 1776491577935.4692
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\item_star.prefab.meta": {
+      "time": 1776491577934.469
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\reward_panel.prefab.meta": {
+      "time": 1776491577937.4695
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\btn_start.prefab": {
+      "time": 1776491577932.4705,
+      "uuid": "b1234567-0003-4000-8000-000000000003"
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\item_diamond.prefab": {
+      "time": 1776491577935.4692,
+      "uuid": "b1234567-0005-4000-8000-000000000005"
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\btn_cancel.prefab": {
+      "time": 1776492158976.4993,
+      "uuid": "b1234567-0002-4000-8000-000000000002"
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\item_star.prefab": {
+      "time": 1776492140757.5935,
+      "uuid": "b1234567-0004-4000-8000-000000000004"
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\btn_confirm.prefab": {
+      "time": 1776491577929.4702,
+      "uuid": "b1234567-0001-4000-8000-000000000001"
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\reward_panel.prefab": {
+      "time": 1776944659810,
+      "uuid": "b1234567-0006-4000-8000-000000000006"
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\components\\Marquee.ts": {
+      "time": 1777425262072.383,
+      "uuid": "21c72b97-5f9d-4bcd-bf57-7b57ef58d703"
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\components\\Marquee.ts.meta": {
+      "time": 1776944476986.082
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\marquee_demo.prefab.meta": {
+      "time": 1776945134946.711
+    },
+    "C:\\myProject\\cocos\\assets\\ui\\marquee_demo.prefab": {
+      "time": 1776947345151.4329,
+      "uuid": "39619214-f7f9-4c6b-b41c-914410a882d5"
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\CombatManager.ts": {
+      "time": 1777300943151.3342,
+      "uuid": "28457775-53ca-4070-a78f-254033c41f59"
+    },
+    "C:\\myProject\\cocos\\assets\\scripts\\CombatManager.ts.meta": {
+      "time": 1777427012775.171
+    }
+  },
+  "missing": {
+    "ec0e7469-1922-47bc-9d3e-f9742acb6957": {
+      "path": "C:\\myProject\\cocos\\assets\\images\\default_btn_normal.png",
+      "time": 1766069649508.4695,
+      "removeTime": 1776944525257
+    },
+    "a1234567-0003-4000-8000-000000000003": {
+      "path": "C:\\myProject\\cocos\\assets\\images\\icon_star.png",
+      "time": 1776491577916.9644,
+      "removeTime": 1776944525258
+    },
+    "a1234567-0001-4000-8000-000000000001": {
+      "path": "C:\\myProject\\cocos\\assets\\images\\btn_blue.png",
+      "time": 1776491577902.9592,
+      "removeTime": 1776944525546
+    },
+    "a1234567-0002-4000-8000-000000000002": {
+      "path": "C:\\myProject\\cocos\\assets\\images\\btn_green.png",
+      "time": 1776491577910.9573,
+      "removeTime": 1776944525546
+    },
+    "a1234567-0005-4000-8000-000000000005": {
+      "path": "C:\\myProject\\cocos\\assets\\images\\frame_border.png",
+      "time": 1776491577926.962,
+      "removeTime": 1776944525547
+    },
+    "a1234567-0004-4000-8000-000000000004": {
+      "path": "C:\\myProject\\cocos\\assets\\images\\icon_diamond.png",
+      "time": 1776491577921.9614,
+      "removeTime": 1776944525548
+    },
+    "96460713-2d48-46d3-8825-a61302b109f5": {
+      "path": "C:\\myProject\\cocos\\assets\\images\\red.png",
+      "time": 1776490401955.3435,
+      "removeTime": 1776944525548
+    }
+  }
+}
